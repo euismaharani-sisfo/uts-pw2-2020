@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.index');
 });
+Route::get('/produk', 'ProdukController@index');
+Route::get('/tambah', 'ProdukController@tambah');
+Route::get('/detail', 'ProdukController@detail')->name('success-form');
+Route::get('form','ProdukController@tambah');
+Route::get('index', 'ProdukController@index');

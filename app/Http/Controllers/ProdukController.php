@@ -32,16 +32,16 @@ class ProdukController extends Controller
             ]
         ];
 
-        //kemudian tampilkan dalam view
+        return view ('produk.index',["produk"=>$produk]);
     }
     
     public function tambah()
     {
-        // tampilkan form seperti yang ada di template
+        return view ('tambah.form');
     }
 
-    public function detail()
+    public function detail(Request $request)
     {
-        // tampilkan halaman success seperti yang ada di template
+        return view ('detail.success',['request'=>$request]);
     }
 }
